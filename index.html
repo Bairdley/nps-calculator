@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <title>NPS Calculator</title>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="template/nps.css">
+    </head>
+    <body>
+        <section>
+            <h1>NPS CALCULATOR</h1>
+            <div id="wrapper">
+                <div id="form">
+                  <label for="one"><p>Promoters</p></label><input autocomplete="off" id="one" type="number" min="0" value="0">
+                  <label for="two"><p>Neutrals</p></label><input autocomplete="off" id="two" type="number" min="0" value="0">
+                  <label for="three"><p>Detractors</p></label><input autocomplete="off" id="three" type="number" min="0" value="0">
+                  <br>
+                  <label id="goal" for="four"><p>NPS Goal: &nbsp;<span id="goal-value">80</span></p></label><input id="four" type="range" min="60" max="99" value="80">
+                  <br>
+                </div>
+                <div id="form2">
+                  <div>
+                    <h3>Current NPS:</h3>
+                  </div>
+                  <div>
+                    <p><span>0.00</span></p>
+                  </div>
+                  <div>
+                    <h3>Promoters to Goal:</h3>
+                  </div>
+                  <div>
+                    <p><span id="promoters-to-goal">1.00</span></p>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <button id="clear">CLEAR</button>
+        </section>
+        <p id="signature">A tool by <a href="https://github.com/Bairdley">Brad Mitchell</a></p>
+        <script src="template/nps.js"></script>
+    </body>
+</html>
+​
