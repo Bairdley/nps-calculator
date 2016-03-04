@@ -56,8 +56,3 @@ document.getElementById('clear').addEventListener('click', function() {
     document.getElementsByTagName('span')[2].innerHTML = '1.00';
     document.getElementsByTagName('span')[1].style.color = 'seagreen';
 });
-
-
-
-
-​
