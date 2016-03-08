@@ -29,8 +29,8 @@ function calculations() {
     var d = Number(document.getElementById('four').value);
     document.getElementsByTagName('span')[0].innerHTML = d;
     var x = (((-100 * detractors) - (detractors * d) + 
-            (100 * promoters) - (neutrals * d) - 
-            (promoters * d)) / (-100 + d)).toFixed(2);
+        (100 * promoters) - (neutrals * d) - 
+        (promoters * d)) / (-100 + d)).toFixed(2);
     document.getElementsByTagName('span')[2].innerHTML = x;
   
     //Fringe-case conditionals
