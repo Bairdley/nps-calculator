@@ -31,8 +31,8 @@ function calculations() {
     var pToGoal = Number(document.getElementById('four').value);
     displays[0].innerHTML = pToGoal;
     var x = (((-100 * detractors) - (detractors * pToGoal) +
-        (100 * promoters) - (neutrals * pToGoal) -
-        (promoters * pToGoal)) / (-100 + pToGoal)).toFixed(2);
+            (100 * promoters) - (neutrals * pToGoal) -
+            (promoters * pToGoal)) / (-100 + pToGoal)).toFixed(2);
     displays[2].innerHTML = x;
 
     //Fringe-case conditionals
