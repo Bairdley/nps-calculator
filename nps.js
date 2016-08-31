@@ -1,5 +1,12 @@
 var inputs = document.getElementsByTagName('input'),
-    displays = document.getElementsByTagName('span');
+    displays = document.getElementsByClassName('displays');
+	arrows = document.getElementsByClassName('arrows');
+
+for (var i = 0; i < arrows.length; i ++) {
+		arrows[i].addEventListener('click', function() {
+			this.innerHTML === '-' ? subtractSurvey(this) : addSurvey(this);
+		})
+	}
 
 inputs[3].addEventListener('input', function() {
     displays[0].innerHTML = inputs[3].value;
@@ -46,6 +53,18 @@ function calculations() {
             break;
     }
 };
+
+function addSurvey(el) {
+	var input = document.getElementById(el.classList[2]);
+	input.value = Number(input.value) + 1;
+	calculations();
+}
+
+function subtractSurvey(el) {
+	var input = document.getElementById(el.classList[2]);
+	input.value = Number(input.value) - 1;
+	calculations();
+}
 
 //Clear button - sets elements back to default values
 document.getElementById('clear').addEventListener('click', function() {
