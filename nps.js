@@ -1,22 +1,22 @@
 var inputs = document.getElementsByTagName('input'),
-    displays = document.getElementsByClassName('displays');
-	arrows = document.getElementsByClassName('arrows');
+    displays = document.getElementsByClassName('displays'),
+    arrows = document.getElementsByClassName('arrows');
 
-for (var i = 0; i < arrows.length; i ++) {
-		arrows[i].addEventListener('click', function() {
-			this.innerHTML === '-' ? subtractSurvey(this) : addSurvey(this);
-		})
-	}
+for (var i = 0; i < arrows.length; i++) {
+    arrows[i].addEventListener('click', function() {
+        this.innerHTML === '-' ? subtractSurvey(this) : addSurvey(this);
+    });
+}
 
 inputs[3].addEventListener('input', function() {
     displays[0].innerHTML = inputs[3].value;
-})
+});
 
 for (var i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener('input', function() {
         calculations();
     }, false);
-};
+}
 
 function calculations() {
     //NPS calculation
@@ -38,8 +38,8 @@ function calculations() {
     var pToGoal = Number(document.getElementById('four').value);
     displays[0].innerHTML = pToGoal;
     var x = (((-100 * detractors) - (detractors * pToGoal) +
-            (100 * promoters) - (neutrals * pToGoal) -
-            (promoters * pToGoal)) / (-100 + pToGoal)).toFixed(2);
+        (100 * promoters) - (neutrals * pToGoal) -
+        (promoters * pToGoal)) / (-100 + pToGoal)).toFixed(2);
     displays[2].innerHTML = x;
 
     //Fringe-case conditionals
@@ -52,18 +52,18 @@ function calculations() {
             currentNPS.innerHTML = '0.00';
             break;
     }
-};
+}
 
 function addSurvey(el) {
-	var input = document.getElementById(el.classList[2]);
-	input.value = Number(input.value) + 1;
-	calculations();
+    var input = document.getElementById(el.classList[2]);
+    input.value = Number(input.value) + 1;
+    calculations();
 }
 
 function subtractSurvey(el) {
-	var input = document.getElementById(el.classList[2]);
-	input.value = Number(input.value) - 1;
-	calculations();
+    var input = document.getElementById(el.classList[2]);
+    input.value = Number(input.value) - 1;
+    calculations();
 }
 
 //Clear button - sets elements back to default values
