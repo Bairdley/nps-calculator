@@ -6,19 +6,40 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+        <h1 class="title-mobile">NPS CALCULATOR</h1>
         <section>
-            <h1>NPS CALCULATOR</h1>
+            <h1 class="title-desktop">NPS CALCULATOR</h1>
             <div id="wrapper">
                 <div id="form">
                   <label for="one"><p>Promoters</p></label>
-                    <input autocomplete="off" id="one" type="number" min="0" value="0">
+                  <div>
+                      <span class="arrows minus one">-</span>
+                      <input autocomplete="off" id="one" type="number" min="0" value="0">
+                        <span class="arrows plus one">+</span>
+                  </div>
+
                   <label for="two"><p>Neutrals</p></label>
+                    <div>
+                    <span class="arrows minus two">-</span>
                     <input autocomplete="off" id="two" type="number" min="0" value="0">
+                    <span class="arrows plus two">+</span>
+                    </div>
                   <label for="three"><p>Detractors</p></label>
-                    <input autocomplete="off" id="three" type="number" min="0" value="0">
-                  <br>
-                  <label id="goal" for="four"><p>NPS Goal: &nbsp;<span id="goal-value">80</span></p></label>
-                    <input id="four" type="range" min="60" max="99" value="80">
+                  <div>
+                      <span class="arrows minus three">-</span>
+                      <input autocomplete="off" id="three" type="number" min="0" value="0">
+                      <span class="arrows plus three">+</span>
+                  </div>
+                  <label id="goal" for="four">
+                      <p>NPS Goal: &nbsp;
+                          <span id="goal-value" class="displays">80</span>
+                      </p>
+                  </label>
+                  <div>
+                      <span class="arrows minus four">-</span>
+                      <input id="four" type="range" min="60" max="99" value="80">
+                        <span class="arrows plus four">+</span>
+                  </div>
                   <br>
                 </div>
                 <div id="form2">
@@ -26,21 +47,25 @@
                     <h3>Current NPS:</h3>
                   </div>
                   <div>
-                    <p><span>0.00</span></p>
+                    <p><span class="displays">0.00</span></p>
                   </div>
                   <div>
                     <h3>Promoters to Goal:</h3>
                   </div>
                   <div>
-                    <p><span id="promoters-to-goal">1.00</span></p>
+                    <p><span id="promoters-to-goal" class="displays">1.00</span></p>
                   </div>
                 </div>
               </div>
               <br>
               <button id="clear">CLEAR</button>
         </section>
-        <p id="signature">A tool by <a href="https://github.com/bc-brad">Brad Mitchell</a></p>
+        <p id="signature">A tool by <a href="https://github.com/Bairdley">Brad Mitchell</a></p>
         <script src="nps.js"></script>
     </body>
 </html>
-​
+
+
+
+    
+    

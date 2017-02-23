@@ -11,7 +11,7 @@ body,html {
 }
 
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .title-desktop {
         display: none;
     }
@@ -450,4 +450,3 @@ body,html {
         text-decoration: underline;
     }
 }
-​
